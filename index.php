@@ -74,7 +74,7 @@ if(empty($_SESSION['login_user'])){
       <!-- BEGIN SIDEBAR MENU -->
       <!--<p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="fa fa-refresh"></i></a></span></p>-->
       <ul>
-        <li class=""> <a href="#"> <i class="fa fa-envelope"></i> <span class="title">Участник</span></a> </li>
+        <li class=""> <a href="#"> <i class="fa fa-users"></i> <span class="title">Участник</span></a> </li>
         <li class="start "> <a href="index.php" > <i class="icon-custom-home"></i> <span class="title">Заемщик</span> <span class="selected"></span></a></li>
           <li class=""> <a href="1"> <i class="fa fa-folder-open"></i> <span class="title">Документы</span> <span class="arrow "></span> </a>
               <ul class="sub-menu">
@@ -136,7 +136,7 @@ if(empty($_SESSION['login_user'])){
           <br>
           <p><i class="fa fa-briefcase"></i>  Дата выдачи займа:</p>
           <p>открыта</p>
-          <p><i class="fa fa-envelope"></i>  Срок погашения займа:</p>
+          <p><i class="fa fa-clock-o"></i>  Срок погашения займа:</p>
           <p>27.11.2025</p>
         </div>
       </div>
