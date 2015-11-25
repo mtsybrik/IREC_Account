@@ -4,10 +4,10 @@ if (!$mysqli) {
     die('mysqli_init failed');
 }
 $env='';
-$env ='production';
+//$env ='production';
 if($env=='production') {
     $user = 'corpwffl_account';
-    $password = "1PUPSEmcK2,D";
+    $password = "J9yW0HbKMRz";
     $db = 'corpwffl_accounts';
     $host = 'localhost';
     $port = 3306;

@@ -1,8 +1,9 @@
 <?php
-
+error_log(E_ALL);
 require 'Libs/connect.php';
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
+$_SESSION['login_user']='';
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
         $error = "Username or Password is invalid";
@@ -19,7 +20,7 @@ if (isset($_POST['submit'])) {
         $password = $mysqli->real_escape_string($password);
 
 // SQL query to fetch information of registerd users and finds user match.
-        $query = $mysqli->query("select * from user where password='$password' AND login='$username'");
+        $query = $mysqli->query("select * from User where password='$password' AND login='$username'");
         if ($query->num_rows == 1) {
             $_SESSION['login_user'] = $username; // Initializing Session
             header("location: index.php"); // Redirecting To Other Page
