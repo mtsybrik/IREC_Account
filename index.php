@@ -161,7 +161,7 @@ if(empty($_SESSION['login_user'])){
           <div class="tiles red ">
             <div class="tiles-body">
               <div class="tiles-title"> ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ </div>
-              <div class="heading"> $ <span class="animate-number" data-value="918.19" data-animation-duration="1200">918.19</span> </div>
+              <div class="heading"> $ <span class="animate-number" data-value="980.31" data-animation-duration="1200">980.31</span> </div>
             </div>
           </div>
         </div>
@@ -183,12 +183,12 @@ if(empty($_SESSION['login_user'])){
 			  <div class="row">
 				<div class="sales-graph-heading">
 				<div class="col-md-5 col-sm-5">
-				  <h5 class="no-margin">Доступный баланс WellMax</h5>
+                  <p class="semi-bold">ДОСТУПНЫЙ БАЛАНС WELLMAX</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="395.64" data-animation-duration="700">395.64</span> USD</h4>
 				</div>
 				<div class="col-md-3 col-sm-3">
 				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА</p>
-				  <h4>07.12.2015</h4>
+				  <h4><span class="item-count animate-number semi-bold">07.12.2015</span></h4>
 				</div>
 				<div class="col-md-4 col-sm-3">
 				  <p class="semi-bold">СУММА ЗАДОЛЖЕННОСТИ</p>
@@ -199,26 +199,19 @@ if(empty($_SESSION['login_user'])){
 			  </div>
 			  <!--<h5 class="semi-bold m-t-30 m-l-30">LAST SALE</h5>-->
 			  <table class="table no-more-tables m-t-20 m-l-20 m-b-30">
-				<thead style="display:none">
-				  <tr>
-					<th style="width:22%">Описание</th>
-					<th style="width:6%">Дата</th>
-					<th style="width:1%"> </th>
-				  </tr>
-				</thead>
 				<tbody>
 				  <tr>
-					<td class="v-align-middle"><span class="muted">Дата пересмотра процентной ставки</span> </td>
+					<td style="width: 475px;"><span class="muted">Дата пересмотра процентной ставки</span> </td>
 					<td><span class="muted bold text-success">25.11.2017</span> </td>
-					<td class="v-align-middle"></td>
+					<td ></td>
 				  </tr>
 				  <tr>
-					<td class="v-align-middle"><span class="muted">Период действия страхования недвижимостиe</span> </td>
+					<td style="width: 475px;"><span class="muted">Период действия страхования недвижимостиe</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>
                   <tr>
-					<td class="v-align-middle"><span class="muted">Период действия личного страхования</span> </td>
+					<td style="width: 475px;"><span class="muted">Период действия личного страхования</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>
@@ -238,7 +231,7 @@ if(empty($_SESSION['login_user'])){
         </div>
         <div class="col-md-4 col-vlg-4 m-b-12 text-right">
           <i class="fa fa-clock-o"></i> Working Hours
-          <span>8:00 to 16:30 CET0</span>
+          <span>8:00 to 16:30 CET</span>
         </div>
       </div>
 		<!-- END REALTIME SALES GRAPH -->
