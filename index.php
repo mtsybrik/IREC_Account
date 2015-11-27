@@ -114,10 +114,10 @@ if(empty($_SESSION['login_user'])){
       </div>
 	   <!-- BEGIN DASHBOARD TILES -->
       <div class="row">
-        <div class="col-md-4 col-vlg-3 col-sm-6">
+        <div class="col-md-2 col-vlg-3 col-sm-2">
           <img src="assets/img/INTERNATIONAL-REAL-ESTATE-COMMUNITY_logo_7.png" >
         </div>
-        <div class="col-md-3 col-vlg-3 col-sm-6">
+        <div class="col-md-5 col-vlg-3 col-sm-5">
           <div class="user-mini-description">
             <h5>Номер договора займа</h5>
             <h3 class="text-success semi-bold">
@@ -130,7 +130,7 @@ if(empty($_SESSION['login_user'])){
             </h3>
           </div>
         </div>
-        <div class="col-md-4 col-vlg-3 col-sm-6" style="float: right" >
+        <div class="col-md-5 col-vlg-3 col-sm-5" style="float: right" >
           <h6 class="no-margin">Вид займа</h6>
           <h4 class="semi-bold no-margin">Под залог прав на активы WellMax</h4>
           <br>
@@ -188,7 +188,7 @@ if(empty($_SESSION['login_user'])){
 				</div>
 				<div class="col-md-3 col-sm-3">
 				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА</p>
-				  <h4><span class="item-count animate-number semi-bold">07.12.2015</span></h4>
+				  <h4><span class="semi-bold">07.12.2015</span></h4>
 				</div>
 				<div class="col-md-4 col-sm-3">
 				  <p class="semi-bold">СУММА ЗАДОЛЖЕННОСТИ</p>
