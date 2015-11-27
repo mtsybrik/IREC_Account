@@ -131,7 +131,7 @@ if(empty($_SESSION['login_user'])){
           </div>
         </div>
         <div class="col-md-4 col-vlg-3 col-sm-4" style="float: right" >
-          <h6 class="no-margin">Вид займа</h6>
+          <h6 class="no-margin"><i class="fa fa-shield"></i>&nbsp;&nbsp;Вид займа</h6>
           <h4 class="semi-bold no-margin">Под залог прав на активы WellMax</h4>
           <br>
           <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Дата выдачи займа:</h6>
