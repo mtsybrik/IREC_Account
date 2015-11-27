@@ -130,7 +130,7 @@ if(empty($_SESSION['login_user'])){
             </h3>
           </div>
         </div>
-        <div class="col-md-4 col-vlg-3 col-sm-4" style="float: right" >
+        <div class="col-md-4 col-vlg-4 col-sm-4" style="float: right" >
           <h6 class="no-margin"><i class="fa fa-shield"></i>&nbsp;&nbsp;Вид займа</h6>
           <h4 class="semi-bold no-margin">Под залог прав на активы WellMax</h4>
           <br>
@@ -142,7 +142,7 @@ if(empty($_SESSION['login_user'])){
         </div>
       </div>
       <div class="row 2col">
-        <div class="col-md-3 col-sm-6 m-b-10">
+        <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles blue ">
             <div class="tiles-body">
               <div class="tiles-title"> ОБЩАЯ СУММА ЗАЙМА </div>
@@ -150,7 +150,7 @@ if(empty($_SESSION['login_user'])){
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 m-b-10">
+        <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles green ">
             <div class="tiles-body">
               <div class="tiles-title"> ОСТАВШАЯСЯ СУММА </div>
@@ -158,7 +158,7 @@ if(empty($_SESSION['login_user'])){
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 m-b-10">
+        <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles red ">
             <div class="tiles-body">
               <div class="tiles-title"> ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ </div>
@@ -179,7 +179,7 @@ if(empty($_SESSION['login_user'])){
       </div>
 		<!-- BEGIN REALTIME SALES GRAPH -->
 		<div class="row">
-        <div class="col-md-12 col-vlg-4 m-b-10 ">
+        <div class="col-md-12 col-vlg-12 m-b-10 ">
 			<div class="tiles white">
 			  <div class="row">
 				<div class="sales-graph-heading">
@@ -191,7 +191,7 @@ if(empty($_SESSION['login_user'])){
 				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА</p>
 				  <h4><span class="semi-bold">07.12.2015</span></h4>
 				</div>
-				<div class="col-md-4 col-sm-3">
+				<div class="col-md-4 col-sm-4">
 				  <p class="semi-bold">СУММА ЗАДОЛЖЕННОСТИ</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="0" data-animation-duration="700">0</span> USD</h4>
 				</div>
