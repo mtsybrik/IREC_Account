@@ -123,21 +123,22 @@ if(empty($_SESSION['login_user'])){
             <h3 class="text-success semi-bold">
               CRC-90000001
             </h3>
-            <br><br>
+            <br><br style="line-height: 2.2em">
             <h5>Договор WellMax</h5>
             <h3 class="text-success semi-bold">
               WMGLP-20140326-008296-131
             </h3>
           </div>
         </div>
-        <div class="col-md-5 col-vlg-3 col-sm-5" style="float: right" >
+        <div class="col-md-4 col-vlg-3 col-sm-4" style="float: right" >
           <h6 class="no-margin">Вид займа</h6>
           <h4 class="semi-bold no-margin">Под залог прав на активы WellMax</h4>
           <br>
-          <p><i class="fa fa-briefcase"></i>  Дата выдачи займа:</p>
-          <p>открыта</p>
-          <p><i class="fa fa-clock-o"></i>  Срок погашения займа:</p>
-          <p>27.11.2025</p>
+          <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Дата выдачи займа:</h6>
+          <h4 class="semi-bold no-margin">Открыта</h4>
+          <br>
+          <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Срок погашения займа:</h6>
+          <h4 class="semi-bold no-margin">27.11.2025</h4>
         </div>
       </div>
       <div class="row 2col">
@@ -268,8 +269,6 @@ if(empty($_SESSION['login_user'])){
 <script src="assets/plugins/jquery-sparkline/jquery-sparkline.js"></script>
 <script src="assets/plugins/skycons/skycons.js"></script>
 <script src="assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="assets/plugins/jquery-gmap/gmaps.js" type="text/javascript"></script>
 <script src="assets/plugins/Mapplic/js/jquery.easing.js" type="text/javascript"></script>
 <script src="assets/plugins/Mapplic/js/jquery.mousewheel.js" type="text/javascript"></script>
 <script src="assets/plugins/Mapplic/js/hammer.js" type="text/javascript"></script>
