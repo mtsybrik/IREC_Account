@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97f1ba79-33a2-47a0-b7f7-44eec23778c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
     </list>
     <ignored path="IREC_Account.iws" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33287293">
-              <caret line="1806" column="42" selection-start-line="1806" selection-start-column="42" selection-end-line="1806" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.3121547">
+              <caret line="5420" column="20" selection-start-line="5420" selection-start-column="20" selection-end-line="5420" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -379,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33287293">
-          <caret line="1806" column="42" selection-start-line="1806" selection-start-column="42" selection-end-line="1806" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.3121547">
+          <caret line="5420" column="20" selection-start-line="5420" selection-start-column="20" selection-end-line="5420" selection-end-column="20" />
           <folding />
         </state>
       </provider>
