@@ -207,7 +207,7 @@ if(empty($_SESSION['login_user'])){
 					<td ></td>
 				  </tr>
 				  <tr>
-					<td style="width: 475px;"><span class="muted">Период действия страхования недвижимостиe</span> </td>
+					<td style="width: 475px;"><span class="muted">Период действия страхования недвижимости</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>
@@ -223,15 +223,15 @@ if(empty($_SESSION['login_user'])){
         </div>
       <div>
         <div class="col-md-4 col-vlg-4 m-b-12">
-          <i class="fa fa-phone"></i> Free Line For You
+          <i class="fa fa-phone"></i> Free Line For You : &nbsp;
           <span>+421220400693</span>
         </div>
         <div class="col-md-4 col-vlg-4 m-b-12 text-center">
-          <i class="fa fa-envelope"></i> Email Us
+          <i class="fa fa-envelope"></i> Email Us: &nbsp;
           <span>office@i-r-e-c.com</span>
         </div>
         <div class="col-md-4 col-vlg-4 m-b-12 text-right">
-          <i class="fa fa-clock-o"></i> Working Hours
+          <i class="fa fa-clock-o"></i> Working Hours : &nbsp;
           <span>8:00 to 16:30 CET</span>
         </div>
       </div>
