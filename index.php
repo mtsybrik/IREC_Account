@@ -200,19 +200,24 @@ if(empty($_SESSION['login_user'])){
 			  </div>
 			  <!--<h5 class="semi-bold m-t-30 m-l-30">LAST SALE</h5>-->
 			  <table class="table no-more-tables m-t-20 m-l-20 m-b-30">
-				<tbody>
+                <colgroup>
+                  <col class="col-md-5">
+                  <col class="col-md-3">
+                  <col class="col-md-4">
+                </colgroup>
+                <tbody>
 				  <tr>
-					<td style="width: 475px;"><span class="muted">Дата пересмотра процентной ставки</span> </td>
+					<td><span class="muted">Дата пересмотра процентной ставки</span> </td>
 					<td><span class="muted bold text-success">25.11.2017</span> </td>
 					<td ></td>
 				  </tr>
 				  <tr>
-					<td style="width: 475px;"><span class="muted">Период действия страхования недвижимости</span> </td>
+					<td><span class="muted">Период действия страхования недвижимости</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>
                   <tr>
-					<td style="width: 475px;"><span class="muted">Период действия личного страхования</span> </td>
+					<td><span class="muted">Период действия личного страхования</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>

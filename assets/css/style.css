@@ -450,7 +450,7 @@ body.modal-open .chat-window-wrapper {
 .page-sidebar {
   background-color: #1b1e24 !important;
   height: 100%;
-  font-family: 'Open Sans';
+  font-family: "Arial", Gadget, sans-serif;
   -webkit-backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -1804,7 +1804,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: 'Open Sans';
+  font-family: "Arial", Gadget, sans-serif;
   font-weight: 300;
   color: #505458;
 }
