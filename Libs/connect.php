@@ -4,7 +4,7 @@ if (!$mysqli) {
     die('mysqli_init failed');
 }
 $env='';
-//$env ='production';
+$env ='production';
 if($env=='production') {
     $user = 'corpwffl_account';
     $password = "J9yW0HbKMRz";
@@ -23,10 +23,4 @@ if (!$mysqli->real_connect($host, $user, $password, $db,$port)){
     die('Connect Error (' . mysqli_connect_errno() . ') '
         . mysqli_connect_error());
 }
-//$_SESSION['login_user']='';
-//$username = $_SESSION['login_user'];
-//$useravatar = '';
-//$useravatar = $mysqli->query("SELECT picture_url FROM User WHERE login = '$username'");
-//$useravatar = $useravatar->fetch_assoc();
-//$useravatar = $useravatar["picture_url"];
 ?>

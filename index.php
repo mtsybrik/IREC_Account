@@ -1,6 +1,4 @@
 <?php
-session_start();
-//require 'Libs/cookies.php';
 $page='';
 if(isset($_GET['page'])){
     $page=trim(strip_tags($_GET['page']));
@@ -8,11 +6,7 @@ if(isset($_GET['page'])){
 else{
     $page='now';
 }
-//require 'Libs/connect.php';
-
-if(empty($_SESSION['login_user'])){
-        header("Location: login.php");
-        exit;}
+require 'Libs/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -62,12 +56,12 @@ if(empty($_SESSION['login_user'])){
     <!-- BEGIN MINI-PROFILE -->
     <div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
       <div class="user-info-wrapper">
-        <div class="profile-wrapper"> <img src="assets/img/profiles/avatar.jpg"  alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" width="69" height="69" /> </div>
+        <div class="profile-wrapper"> <img src="<? echo $useravatar;?>"  alt="" data-src="<? echo $useravatar;?>" data-src-retina="<? echo $useravatar;?>" width="69" height="69" /> </div>
         <div class="user-info">
-          <div class="username">Natalia <span class="semi-bold">Pisanina</span></div>
+          <div class="username"><? echo $user_firstname; ?> <span class="semi-bold"><? echo $user_lastname; ?></span></div>
           <div class="status">Status
             <div class="status-icon green"></div>
-            Заемщик</div>
+            <? echo $user_status; ?></div>
         </div>
       </div>
       <!-- END MINI-PROFILE -->
@@ -121,24 +115,24 @@ if(empty($_SESSION['login_user'])){
           <div class="user-mini-description">
             <h5>Номер договора займа</h5>
             <h3 class="text-success semi-bold">
-              CRC-90000001
+              <? echo $contract_number?>
             </h3>
             <br><br style="line-height: 2.2em">
             <h5>Договор WellMax</h5>
             <h3 class="text-success semi-bold">
-              WMGLP-20140326-008296-131
+              <? echo $loan_BM; ?>
             </h3>
           </div>
         </div>
         <div class="col-md-4 col-vlg-4 col-sm-4" style="float: right" >
           <h6 class="no-margin"><i class="fa fa-shield"></i>&nbsp;&nbsp;Вид займа</h6>
-          <h4 class="semi-bold no-margin">Под залог прав на активы WellMax</h4>
+          <h4 class="semi-bold no-margin"><? echo $loan_type;?></h4>
           <br>
           <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Дата выдачи займа:</h6>
-          <h4 class="semi-bold no-margin">Открыта</h4>
+          <h4 class="semi-bold no-margin"><? echo $loan_issue_date;?></h4>
           <br>
           <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Срок погашения займа:</h6>
-          <h4 class="semi-bold no-margin">27.11.2025</h4>
+          <h4 class="semi-bold no-margin"><? echo $date_of_payment ?></h4>
         </div>
       </div>
       <div class="row 2col">
@@ -146,7 +140,7 @@ if(empty($_SESSION['login_user'])){
           <div class="tiles blue ">
             <div class="tiles-body">
               <div class="tiles-title"> ОБЩАЯ СУММА ЗАЙМА </div>
-              <div class="heading"> $<span class="animate-number" data-value="110000" data-animation-duration="1200">110000</span> </div>
+              <div class="heading"> $<span class="animate-number" data-value="<? echo $loan_amount;?>" data-animation-duration="1200"><? echo $loan_amount;?></span> </div>
             </div>
           </div>
         </div>
@@ -225,26 +219,28 @@ if(empty($_SESSION['login_user'])){
 			  </table>
 			</div>
         </div>
+          <div class="form-row" style="bottom: 10px; position: absolute; width: 96%">
+            <div class="col-md-4 col-vlg-4 m-b-12">
+              <i class="fa fa-phone"></i> Free Line For You : &nbsp;
+              <span>+421220400693</span>
+            </div>
+            <div class="col-md-4 col-vlg-4 m-b-12 text-center">
+              <i class="fa fa-envelope"></i> Email Us: &nbsp;
+              <span>office@i-r-e-c.com</span>
+            </div>
+            <div class="col-md-4 col-vlg-4 m-b-12 text-right">
+              <i class="fa fa-clock-o"></i> Working Hours : &nbsp;
+              <span>8:00 to 16:30 CET</span>
+            </div>
+          </div>
         </div>
-      <div>
-        <div class="col-md-4 col-vlg-4 m-b-12">
-          <i class="fa fa-phone"></i> Free Line For You : &nbsp;
-          <span>+421220400693</span>
-        </div>
-        <div class="col-md-4 col-vlg-4 m-b-12 text-center">
-          <i class="fa fa-envelope"></i> Email Us: &nbsp;
-          <span>office@i-r-e-c.com</span>
-        </div>
-        <div class="col-md-4 col-vlg-4 m-b-12 text-right">
-          <i class="fa fa-clock-o"></i> Working Hours : &nbsp;
-          <span>8:00 to 16:30 CET</span>
-        </div>
-      </div>
 		<!-- END REALTIME SALES GRAPH -->
-	   </div>
+    </div>
+
 		  </div>
 <!-- BEGIN CHAT -->
-<!-- END CHAT -->		  
+<!-- END CHAT -->
+
 </div>
 
 <!-- END CONTAINER -->
