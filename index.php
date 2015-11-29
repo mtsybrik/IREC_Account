@@ -148,7 +148,7 @@ require 'Libs/functions.php';
           <div class="tiles green ">
             <div class="tiles-body">
               <div class="tiles-title"> ОСТАВШАЯСЯ СУММА </div>
-              <div class="heading"> $<span class="animate-number" data-value="110000" data-animation-duration="1000">110000</span> </div>
+              <div class="heading"> $<span class="animate-number" data-value="<? echo $loan_left;?>" data-animation-duration="1000"><? echo $loan_left;?></span> </div>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ require 'Libs/functions.php';
           <div class="tiles red ">
             <div class="tiles-body">
               <div class="tiles-title"> ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ </div>
-              <div class="heading"> $ <span class="animate-number" data-value="980.31" data-animation-duration="1200">980.31</span> </div>
+              <div class="heading"> $ <span class="animate-number" data-value="<?echo $monthly_payment; ?>" data-animation-duration="1200"><?echo $monthly_payment; ?></span> </div>
             </div>
           </div>
         </div>
@@ -179,15 +179,15 @@ require 'Libs/functions.php';
 				<div class="sales-graph-heading">
 				<div class="col-md-5 col-sm-5">
                   <p class="semi-bold">ДОСТУПНЫЙ БАЛАНС WELLMAX</p>
-				  <h4><span class="item-count animate-number semi-bold" data-value="395.64" data-animation-duration="700">395.64</span> USD</h4>
+				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $BM_balance;?>" data-animation-duration="700"><?echo $BM_balance;?></span> USD</h4>
 				</div>
 				<div class="col-md-3 col-sm-3">
 				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА</p>
-				  <h4><span class="semi-bold">07.12.2015</span></h4>
+				  <h4><span class="semi-bold"><?echo $next_payment_date;?></span></h4>
 				</div>
 				<div class="col-md-4 col-sm-4">
 				  <p class="semi-bold">СУММА ЗАДОЛЖЕННОСТИ</p>
-				  <h4><span class="item-count animate-number semi-bold" data-value="0" data-animation-duration="700">0</span> USD</h4>
+				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $total_debt_montly;?>" data-animation-duration="700"><?echo $total_debt_montly;?></span> USD</h4>
 				</div>
 				<div class="clearfix"></div>
 			  </div>
@@ -202,7 +202,7 @@ require 'Libs/functions.php';
                 <tbody>
 				  <tr>
 					<td><span class="muted">Дата пересмотра процентной ставки</span> </td>
-					<td><span class="muted bold text-success">25.11.2017</span> </td>
+					<td><span class="muted bold text-success"><? echo $percent_rate_change_date;?></span> </td>
 					<td ></td>
 				  </tr>
 				  <tr>

@@ -4,7 +4,7 @@ if (!$mysqli) {
     die('mysqli_init failed');
 }
 $env='';
-$env ='production';
+//$env ='production'; Переключение между лайв и локальной базой
 if($env=='production') {
     $user = 'corpwffl_account';
     $password = "J9yW0HbKMRz";

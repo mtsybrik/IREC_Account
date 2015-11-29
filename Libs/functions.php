@@ -36,21 +36,48 @@ require('connect.php');
     $BM_balance = $percentage_rate = $total_debt_montly = $percent_rate_change_date = $real_estate_insurance_period = $personal_insurance_period = '';
     $loaner_info = $mysqli->query("SELECT * FROM loaner_profile WHERE iduser_profile = '$userid'"); //Выбираем пользователя по id
     $loaner_info = $loaner_info->fetch_assoc();
-    $loan_issue_date = $loaner_info["loan_issue_date"]; //   Дата выдачи займа:
+
+    //   Дата выдачи займа:
+    $loan_issue_date = $loaner_info["loan_issue_date"];
         if($loan_issue_date==0){
             $loan_issue_date='Открыта';
         }
         else{
             $loan_issue_date= date('d.m.Y', $loan_issue_date );
         }
-    $contract_number = $loaner_info["contract_number"]; //Номер договора займа
-    $loan_BM = $loaner_info["loan_BM"]; //Договор WellMax
+
+    //Номер договора займа
+    $contract_number = $loaner_info["contract_number"];
+
+    //Договор WellMax
+    $loan_BM = $loaner_info["loan_BM"];
+
+    //Срока погашения займа
     $year_payment=date('Y', $loaner_info["date_of_payment"])+10; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
     $date_of_payment= date('d.m.', $loaner_info["date_of_payment"]) . $year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
 
+    //ОСТАВШАЯСЯ СУММА
+    $loan_left = $loaner_info["loan_left"];
+
+    //ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ
+    $monthly_payment = $loaner_info["monthly_payment"];
+
+    //ДОСТУПНЫЙ БАЛАНС WELLMAX
+    $BM_balance = $loaner_info["BM_balance"];
+
+    //ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА
+    $next_payment_date=date('07.m.Y',$loaner_info["next_payment_date"]);
+
+    //СУММА ЗАДОЛЖЕННОСТИ
+    $total_debt_montly = $loaner_info["total_debt_montly"];
+
+    //Дата пересмотра процентной ставки
+    $percent_year_payment=date('Y', $loaner_info["date_of_payment"])+2; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
+    $percent_rate_change_date= date('d.m.', $loaner_info["date_of_payment"]) . $percent_year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
 
 
 
-    $mysqli->close();// Closing Connection
 
+// Closing Connection
+$mysqli->close();
 ?>
