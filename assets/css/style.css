@@ -1780,6 +1780,43 @@ body.modal-open .chat-window-wrapper {
     padding-top: 123px;
   }
 }
+@media (min-width: 1700px) {
+  .page-container {
+   font-size: 100%!important;
+ }
+  .table td, .status, .form-row {
+    font-size: 120% !important;
+  }
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+    font-size: 120% !important;
+  }
+  h6, .h6, .form-control, .btn-primary {
+    font-size: 100% !important;
+  }
+  h3, .h3 {
+    font-size: 150% !important;
+    line-height: 45px !important;
+  }
+  h5, .h5 {
+    font-size: 85% !important;
+  }
+  h4, .h4, a {
+    font-size: 145% !important;
+    line-height: 40px !important;
+  }
+  .user-mini-description{
+    font-size: 120% !important;
+  }
+  .tiles .tiles-title {
+    font-size: 90% !important;
+  }
+  .tiles .heading {
+    font-size: 200% !important;
+  }
+  .username{
+    font-size: 190% !important;
+  }
+}
 .h-ribbon {
   width: 100%;
   height: 4px;

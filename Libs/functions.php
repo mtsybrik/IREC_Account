@@ -53,8 +53,8 @@ require('connect.php');
     $loan_BM = $loaner_info["loan_BM"];
 
     //Срока погашения займа
-    $year_payment=date('Y', $loaner_info["date_of_payment"])+10; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
-    $date_of_payment= date('d.m.', $loaner_info["date_of_payment"]) . $year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
+    $year_payment=date('Y', $loaner_info["loan_issue_date"])+10; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
+    $date_of_payment= date('d.m.', $loaner_info["loan_issue_date"]) . $year_payment ;
 
     //ОСТАВШАЯСЯ СУММА
     $loan_left = $loaner_info["loan_left"];
@@ -72,8 +72,8 @@ require('connect.php');
     $total_debt_montly = $loaner_info["total_debt_montly"];
 
     //Дата пересмотра процентной ставки
-    $percent_year_payment=date('Y', $loaner_info["date_of_payment"])+2; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
-    $percent_rate_change_date= date('d.m.', $loaner_info["date_of_payment"]) . $percent_year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
+    $percent_year_payment=date('Y', $loaner_info["loan_issue_date"])+2; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
+    $percent_rate_change_date= date('d.m.', $loaner_info["loan_issue_date"]) . $percent_year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
 
 
 

@@ -14,7 +14,7 @@ require 'Libs/functions.php';
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
-<title>Webarch - Responsive Admin Dashboard</title>
+<title>IREC | International Real Estate Community</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -108,10 +108,10 @@ require 'Libs/functions.php';
       </div>
 	   <!-- BEGIN DASHBOARD TILES -->
       <div class="row">
-        <div class="col-md-2 col-vlg-3 col-sm-2">
+        <div class="col-md-2 col-vlg-2 col-sm-2">
           <img src="assets/img/INTERNATIONAL-REAL-ESTATE-COMMUNITY_logo_7.png" >
         </div>
-        <div class="col-md-5 col-vlg-3 col-sm-5">
+        <div class="col-md-5 col-vlg-5 col-sm-5">
           <div class="user-mini-description">
             <h5>Номер договора займа</h5>
             <h3 class="text-success semi-bold">
@@ -131,7 +131,7 @@ require 'Libs/functions.php';
           <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Дата выдачи займа:</h6>
           <h4 class="semi-bold no-margin"><? echo $loan_issue_date;?></h4>
           <br>
-          <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Срок погашения займа:</h6>
+          <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Дата погашения займа:</h6>
           <h4 class="semi-bold no-margin"><? echo $date_of_payment ?></h4>
         </div>
       </div>
@@ -219,7 +219,7 @@ require 'Libs/functions.php';
 			  </table>
 			</div>
         </div>
-          <div class="form-row" style="bottom: 10px; position: absolute; width: 96%">
+          <div class="form-row" style="bottom: 1.5%; position: absolute; width: 96%">
             <div class="col-md-4 col-vlg-4 m-b-12">
               <i class="fa fa-phone"></i> Free Line For You : &nbsp;
               <span>+421220400693</span>
