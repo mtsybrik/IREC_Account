@@ -69,7 +69,7 @@ $loan_years = 10;
                                             <span style="font-weight:bold">Процентная ставка</span> <input name="percent" value="<? echo $loan_percent; ?>" type="text" class="form-control" placeholder="">
                                         </div>
                                         <div class="col-md-4 col-sm-4">
-                                            <span style="font-weight:bold">Срок погашения</span> <input name="years" value="<? echo $loan_years; ?>" type="text" class="form-control" placeholder="">
+                                            <span style="font-weight:bold">Срок погашения (лет) </span> <input name="years" value="<? echo $loan_years; ?>" type="text" class="form-control" placeholder="">
                                         </div>
                                     </div>
                                 </div>

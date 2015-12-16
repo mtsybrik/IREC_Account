@@ -83,6 +83,11 @@ require 'Libs/functions.php';
           <li><a href="#">
             <div class="status-icon green"></div>
             История Взносов </a> </li>
+          <li>
+            <a href="#">
+              <div class="status-icon yellow"></div>
+              График Платежей </a>
+          </li>
         </ul>
       </div>
       <!-- END SIDEBAR MENU -->
@@ -165,7 +170,7 @@ require 'Libs/functions.php';
             <div class="tiles-body">
               <div class="tiles-title"> ПРОЦЕНТНАЯ СТАВКА </div>
               <div class="row-fluid">
-                <div class="heading"> <span class="animate-number" data-value="1.99" data-animation-duration="12">1.99</span>% </div>
+                <div class="heading"> <span class="animate-number" data-value="<?echo $percentage_rate; ?>" data-animation-duration="12"><?echo $percentage_rate; ?></span>% </div>
             </div>
           </div>
         </div>

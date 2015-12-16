@@ -65,6 +65,9 @@ require('connect.php');
     //ДОСТУПНЫЙ БАЛАНС WELLMAX
     $BM_balance = $loaner_info["BM_balance"];
 
+    //ПРОЦЕНТНАЯ СТАВКА
+    $percentage_rate = $loaner_info["percentage_rate"];
+
     //ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА
     $next_payment_date=date('07.m.Y',$loaner_info["next_payment_date"]);
 
@@ -72,9 +75,47 @@ require('connect.php');
     $total_debt_montly = $loaner_info["total_debt_montly"];
 
     //Дата пересмотра процентной ставки
-    $percent_year_payment=date('Y', $loaner_info["loan_issue_date"])+2; //Прибавляет 10 лет к дате выдачи займа так как срок погашения 10 лет
+    $percent_year_payment=date('Y', $loaner_info["loan_issue_date"])+2; //Прибавляет 2 года к дате выдачи займа так как пересмотр через 2 года
     $percent_rate_change_date= date('d.m.', $loaner_info["loan_issue_date"]) . $percent_year_payment ; // За основу взят date of payment для демо - надо изменить на loan_issue_date
 
+    $loan_years = 10;
+    $loan_months = $loan_years*12;//месяцев в году
+    $loan_upfront_payment = $loan_amount*0.33; // Первоначальный взнос (33% на данный момент)
+    $loan_with_percents = $loan_amount-$loan_upfront_payment; // Тело для начисления процентов
+    $loan_monthly_percent = $percentage_rate/1200; //Процентов в месяц
+    $monthly_payment_with_percent = $loan_with_percents*($loan_monthly_percent+($loan_monthly_percent/((pow((1+$loan_monthly_percent),$loan_months))-1))); // Месячный платеж с процентами
+    $loan_monthly_percentage_payment = '';// Начисление месячных процентов
+    $loan_upfront_payment_monthly = $loan_upfront_payment/$loan_months; // Месячный платеж из первого взноса
+    $total_monthly_payment = $monthly_payment_with_percent+$loan_upfront_payment_monthly; //Общий месячный аннуитентный платеж
+
+    function drawTable($loan_amount, $total_monthly_payment, $loan_upfront_payment_monthly, $loan_with_percents, $loan_monthly_percent, $monthly_payment_with_percent )
+    {
+        echo '<div style="overflow-x:auto;"><table align="center" style="width: 96%; border-collapse: collapse;">
+                <tr><tr style="border: 1px solid #00869D; color:#00869D;"><th>Payment No / № платежа</th><th>Year, month / Год, месяц </th><th>Payment No / № платежа</th><th>Payment No / № платежа</th><th>Payment No / № платежа</th><th>Payment No / № платежа</th></tr>'; // Заголовок
+        $payment_year = 1;
+        $payment_month = 1;
+        $loan_monthly_percentage_payment = '';// Начисление месячных процентов
+        $loan_pure_payment = ''; //Чистое погашение тела
+        $loan_pure_debt = ''; // Чистое тело кредита
+        $loan_total_amount_left = ''; // Общий остаток по кредиту
+        for ($i=1; $i<121; $i++) {
+            echo "<tr style="border: 1px solid #00869D; color:#00869D;">";
+            echo '<td>'. $i . '</td><td>'.$payment_year.' год '. $payment_month . ' месяц </td>';
+            $loan_monthly_percentage_payment = $loan_with_percents*$loan_monthly_percent; // Вычисление месячных процентов для графы Начисленные проценты
+            $loan_pure_payment = $monthly_payment_with_percent - $loan_monthly_percentage_payment; // Вычисление месячного погашения теля для высчитывания Остаток задолженности
+            $loan_with_percents = $loan_with_percents - $loan_pure_payment; // Вычисление графы Основной долг
+            $loan_amount = $loan_amount - ($loan_pure_payment + $loan_upfront_payment_monthly);
+            echo '<td>'. number_format($total_monthly_payment,2) . '</td><td>'.number_format($loan_with_percents,2).'</td><td>'. number_format($loan_monthly_percentage_payment,2).'</td><td>'.number_format($loan_amount,2).'</td>';
+            echo "</tr>";
+            if($payment_month == 12){
+                $payment_year++;
+                $payment_month = 0;
+            }
+            $payment_month++;
+
+        }
+        echo '</table></div>';
+    }
 
 
 
