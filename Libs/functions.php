@@ -106,7 +106,7 @@ require('connect.php');
         }
 
         </style>
-        <div style="overflow-x:auto; margin-right: 15px;"><table align="center" style="border-collapse: collapse; border: 1px solid #00869D;">
+        <div style="overflow-x:auto; margin-right: 20px;"><table align="center" style="border-collapse: collapse; border: 1px solid #00869D;">
                 <tr>
                     <th>Payment No / </br> № платежа</th>
                     <th>Year, month / Год, месяц </th>

@@ -84,7 +84,7 @@ require 'Libs/functions.php';
             <div class="status-icon green"></div>
             История Взносов </a> </li>
           <li>
-            <a href="pdfgenerator.php" target="_blank">
+            <a href="Libs/pdfgenerator.php" target="_blank">
               <div class="status-icon yellow"></div>График Платежей</a>
           </li>
         </ul>

@@ -1,5 +1,5 @@
 <?php
-include("Libs/mpdf60/mpdf.php");
+include("mpdf60/mpdf.php");
 $mpdf=new mPDF('win-1252','A4','','',15,10,16,10,10,10);//A4 page in portrait for landscape add -L.
 //$mpdf->SetHeader('|Your Header here|');
 //$mpdf->setFooter('{PAGENO}');// Giving page number to your footer.
