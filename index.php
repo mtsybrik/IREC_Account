@@ -85,8 +85,7 @@ require 'Libs/functions.php';
             История Взносов </a> </li>
           <li>
             <a href="pdfgenerator.php" target="_blank">
-              <div class="status-icon yellow"></div>
-              График Платежей </a>
+              <div class="status-icon yellow"></div>График Платежей</a>
           </li>
         </ul>
       </div>
@@ -182,16 +181,20 @@ require 'Libs/functions.php';
 			<div class="tiles white">
 			  <div class="row">
 				<div class="sales-graph-heading">
-				<div class="col-md-5 col-sm-5">
-                  <p class="semi-bold">ДОСТУПНЫЙ БАЛАНС WELLMAX</p>
+				<div class="col-md-4 col-sm-4">
+                  <p class="semi-bold">ДОСТУПНЫЙ БАЛАНС</br>  WELLMAX</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $BM_balance;?>" data-animation-duration="700"><?echo $BM_balance;?></span> USD</h4>
 				</div>
 				<div class="col-md-3 col-sm-3">
-				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА</p>
+				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО</br> ПЛАТЕЖА</p>
 				  <h4><span class="semi-bold"><?echo $next_payment_date;?></span></h4>
 				</div>
-				<div class="col-md-4 col-sm-4">
-				  <p class="semi-bold">СУММА ЗАДОЛЖЕННОСТИ</p>
+                <div class="col-md-3 col-sm-3">
+				  <p class="semi-bold">КОЛИЧЕСТВО ПРОПУСКОВ </br> ЕЖЕМЕСЯЧНОГО ПЛАТЕЖА</p>
+				  <h4><span class="semi-bold">0</span></h4>
+				</div>
+				<div class="col-md-2 col-sm-2">
+				  <p class="semi-bold">СУММА</br> ЗАДОЛЖЕННОСТИ</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $total_debt_montly;?>" data-animation-duration="700"><?echo $total_debt_montly;?></span> USD</h4>
 				</div>
 				<div class="clearfix"></div>
@@ -200,8 +203,8 @@ require 'Libs/functions.php';
 			  <!--<h5 class="semi-bold m-t-30 m-l-30">LAST SALE</h5>-->
 			  <table class="table no-more-tables m-t-20 m-l-20 m-b-30">
                 <colgroup>
-                  <col class="col-md-5">
-                  <col class="col-md-3">
+                  <col class="col-md-4">
+                  <col class="col-md-4">
                   <col class="col-md-4">
                 </colgroup>
                 <tbody>
