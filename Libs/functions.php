@@ -90,8 +90,31 @@ require('connect.php');
 
     function drawTable($loan_amount, $total_monthly_payment, $loan_upfront_payment_monthly, $loan_with_percents, $loan_monthly_percent, $monthly_payment_with_percent )
     {
-        echo '<div style="overflow-x:auto;"><table align="center" style="width: 96%; border-collapse: collapse;">
-                <tr><tr style="border: 1px solid #00869D; color:#00869D;"><th>Payment No / № платежа</th><th>Year, month / Год, месяц </th><th>Payment No / № платежа</th><th>Payment No / № платежа</th><th>Payment No / № платежа</th><th>Payment No / № платежа</th></tr>'; // Заголовок
+        echo '<style>
+        tr:nth-child(even) {background-color: white}
+        th, td {
+            padding: 5px;
+            text-align: center;
+            }
+        th {
+            border: 1px solid #00869D;
+            color:#00869D;
+            background-color:white;
+        }
+        td {
+            border: 1px dotted #00869D;
+        }
+
+        </style>
+        <div style="overflow-x:auto; margin-right: 15px;"><table align="center" style="border-collapse: collapse; border: 1px solid #00869D;">
+                <tr>
+                    <th>Payment No / </br> № платежа</th>
+                    <th>Year, month / Год, месяц </th>
+                    <th>Amount of </br> monthly payment / </br> Сумма</br> ежемесячного</br> платежа</th>
+                    <th>Principal debt /</br> Основной долг</th>
+                    <th>Charged interest /</br> Начисленные </br> проценты</th>
+                    <th>Outstanding debt /</br> Остаток </br> задолженности</th>
+                </tr>'; // Заголовок
         $payment_year = 1;
         $payment_month = 1;
         $loan_monthly_percentage_payment = '';// Начисление месячных процентов
@@ -99,7 +122,7 @@ require('connect.php');
         $loan_pure_debt = ''; // Чистое тело кредита
         $loan_total_amount_left = ''; // Общий остаток по кредиту
         for ($i=1; $i<121; $i++) {
-            echo "<tr style="border: 1px solid #00869D; color:#00869D;">";
+            echo '<tr>';
             echo '<td>'. $i . '</td><td>'.$payment_year.' год '. $payment_month . ' месяц </td>';
             $loan_monthly_percentage_payment = $loan_with_percents*$loan_monthly_percent; // Вычисление месячных процентов для графы Начисленные проценты
             $loan_pure_payment = $monthly_payment_with_percent - $loan_monthly_percentage_payment; // Вычисление месячного погашения теля для высчитывания Остаток задолженности
