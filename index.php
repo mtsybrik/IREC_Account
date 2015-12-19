@@ -68,12 +68,12 @@ require 'Libs/functions.php';
       <!-- BEGIN SIDEBAR MENU -->
       <!--<p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="fa fa-refresh"></i></a></span></p>-->
       <ul>
-        <li class=""> <a href="#"> <i class="fa fa-users"></i> <span class="title">Участник</span></a> </li>
-        <li class="start "> <a href="index.php" > <i class="icon-custom-home"></i> <span class="title">Заемщик</span> <span class="selected"></span></a></li>
-          <li class=""> <a href="1"> <i class="fa fa-folder-open"></i> <span class="title">Документы</span> <span class="arrow "></span> </a>
+        <li class=""> <a href="#"> <i class="fa fa-users"></i> <span class="title">Participant</span></a> </li>
+        <li class="start "> <a href="index.php" > <i class="icon-custom-home"></i> <span class="title">Borrower</span> <span class="selected"></span></a></li>
+          <li class=""> <a href="1"> <i class="fa fa-folder-open"></i> <span class="title">Documents</span> <span class="arrow "></span> </a>
               <ul class="sub-menu">
-                  <li > <a href="javascript:;"> Бланки </a> </li>
-                  <li > <a href="javascript:;"> Мои документы</a></li>
+                  <li > <a href="javascript:;"> Templates </a> </li>
+                  <li > <a href="javascript:;"> My Documents</a></li>
               </ul>
           </li>
       </ul>
@@ -82,10 +82,10 @@ require 'Libs/functions.php';
         <ul class="folders">
           <li><a href="#">
             <div class="status-icon green"></div>
-            История Взносов </a> </li>
+            Payment history </a> </li>
           <li>
             <a href="Libs/pdfgenerator.php" target="_blank">
-              <div class="status-icon yellow"></div>График Платежей</a>
+              <div class="status-icon yellow"></div>Payment Schedule</a>
           </li>
         </ul>
       </div>
@@ -93,7 +93,7 @@ require 'Libs/functions.php';
     </div>
   </div>
   <div class="footer-widget">
-    <i class="fa fa-power-off"></i><span class="title"><a href="login.php">&nbsp;&nbsp;&nbsp;&nbsp;Выйти</a></span>
+    <i class="fa fa-power-off"></i><span class="title"><a href="login.php">&nbsp;&nbsp;&nbsp;&nbsp;Log out</a></span>
   </div>
   <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
@@ -117,25 +117,25 @@ require 'Libs/functions.php';
         </div>
         <div class="col-md-5 col-vlg-5 col-sm-5">
           <div class="user-mini-description">
-            <h5>Номер договора займа</h5>
+            <h5>Loan agreement №</h5>
             <h3 class="text-success semi-bold">
               <? echo $contract_number?>
             </h3>
             <br><br style="line-height: 2.2em">
-            <h5>Договор WellMax</h5>
+            <h5>WellMax agreement</h5>
             <h3 class="text-success semi-bold">
               <? echo $loan_BM; ?>
             </h3>
           </div>
         </div>
         <div class="col-md-4 col-vlg-4 col-sm-4" style="float: right" >
-          <h6 class="no-margin"><i class="fa fa-shield"></i>&nbsp;&nbsp;Вид займа</h6>
+          <h6 class="no-margin"><i class="fa fa-shield"></i>&nbsp;&nbsp;Loan type</h6>
           <h4 class="semi-bold no-margin"><? echo $loan_type;?></h4>
           <br>
-          <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Дата выдачи займа:</h6>
+          <h6 class="no-margin"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Date of loan issue:</h6>
           <h4 class="semi-bold no-margin"><? echo $loan_issue_date;?></h4>
           <br>
-          <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Дата погашения займа:</h6>
+          <h6 class="no-margin"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;  Date of loan repayment:</h6>
           <h4 class="semi-bold no-margin"><? echo $date_of_payment ?></h4>
         </div>
       </div>
@@ -143,7 +143,7 @@ require 'Libs/functions.php';
         <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles blue ">
             <div class="tiles-body">
-              <div class="tiles-title"> ОБЩАЯ СУММА ЗАЙМА </div>
+              <div class="tiles-title"> TOTAL SUM OF LOAN </div>
               <div class="heading"> $<span class="animate-number" data-value="<? echo $loan_amount;?>" data-animation-duration="1200"><? echo $loan_amount;?></span> </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ require 'Libs/functions.php';
         <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles green ">
             <div class="tiles-body">
-              <div class="tiles-title"> ОСТАВШАЯСЯ СУММА </div>
+              <div class="tiles-title"> OUTSTANDING DEBT </div>
               <div class="heading"> $<span class="animate-number" data-value="<? echo $loan_left;?>" data-animation-duration="1000"><? echo $loan_left;?></span> </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ require 'Libs/functions.php';
         <div class="col-md-3 col-sm-3 m-b-10">
           <div class="tiles red ">
             <div class="tiles-body">
-              <div class="tiles-title"> ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ </div>
+              <div class="tiles-title"> MONTHLY PAYMENT </div>
               <div class="heading"> $ <span class="animate-number" data-value="<?echo $monthly_payment; ?>" data-animation-duration="1200"><?echo $monthly_payment; ?></span> </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ require 'Libs/functions.php';
         <div class="col-md-3 col-sm-6 m-b-10">
           <div class="tiles purple  ">
             <div class="tiles-body">
-              <div class="tiles-title"> ПРОЦЕНТНАЯ СТАВКА </div>
+              <div class="tiles-title"> INTEREST RATE </div>
               <div class="row-fluid">
                 <div class="heading"> <span class="animate-number" data-value="<?echo $percentage_rate; ?>" data-animation-duration="12"><?echo $percentage_rate; ?></span>% </div>
             </div>
@@ -182,19 +182,19 @@ require 'Libs/functions.php';
 			  <div class="row">
 				<div class="sales-graph-heading">
 				<div class="col-md-4 col-sm-4">
-                  <p class="semi-bold">ДОСТУПНЫЙ БАЛАНС</br>  WELLMAX</p>
+                  <p class="semi-bold">WELLMAX AVAILABLE</br>  BALANCE</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $BM_balance;?>" data-animation-duration="700"><?echo $BM_balance;?></span> USD</h4>
 				</div>
 				<div class="col-md-3 col-sm-3">
-				  <p class="semi-bold">ДАТА СЛЕДУЮЩЕГО</br> ПЛАТЕЖА</p>
+				  <p class="semi-bold">DATE OF NEXT</br> PAYMENT</p>
 				  <h4><span class="semi-bold"><?echo $next_payment_date;?></span></h4>
 				</div>
                 <div class="col-md-3 col-sm-3">
-				  <p class="semi-bold">КОЛИЧЕСТВО ПРОПУСКОВ </br> ЕЖЕМЕСЯЧНОГО ПЛАТЕЖА</p>
+				  <p class="semi-bold">AMOUNT OF MISSED </br> MONTHLY PAYMENTS</p>
 				  <h4><span class="semi-bold">0</span></h4>
 				</div>
 				<div class="col-md-2 col-sm-2">
-				  <p class="semi-bold">СУММА</br> ЗАДОЛЖЕННОСТИ</p>
+				  <p class="semi-bold">SUM OF</br> INDEPTEDNESS</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $total_debt_montly;?>" data-animation-duration="700"><?echo $total_debt_montly;?></span> USD</h4>
 				</div>
 				<div class="clearfix"></div>
@@ -209,17 +209,17 @@ require 'Libs/functions.php';
                 </colgroup>
                 <tbody>
 				  <tr>
-					<td><span class="muted">Дата пересмотра процентной ставки</span> </td>
+					<td><span class="muted">Revision date of interest rate</span> </td>
 					<td><span class="muted bold text-success"><? echo $percent_rate_change_date;?></span> </td>
 					<td ></td>
 				  </tr>
 				  <tr>
-					<td><span class="muted">Период действия страхования недвижимости</span> </td>
+					<td><span class="muted">Validity period of real estate insurance</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>
                   <tr>
-					<td><span class="muted">Период действия личного страхования</span> </td>
+					<td><span class="muted">Validity period of personal insurance</span> </td>
 					<td><span class="muted bold text-success"></span> </td>
 					<td class="v-align-middle"></td>
 				  </tr>

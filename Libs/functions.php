@@ -16,17 +16,17 @@ require('connect.php');
     $user_lastname = $userinfo["last_name"]; // Фамилия пользователя
     $user_status = $userinfo["status"]; // Статус пользователя - в базе 0 или 1, значения в коде менять
         if($user_status==1){
-            $user_status='Заемщик';
+            $user_status='Borrower';
         }
         else{
-            $user_status='Участник';
+            $user_status='Participant';
         };
     $loan_type = $userinfo["status"]; //Вид займа - в базе 0 или 1, а значения прописаны тут так как из базы приходило ????
         if($loan_type==1){
-            $loan_type='Под залог прав на активы WellMax';
+            $loan_type='Under the pledge of WellMax assets';
         }
         else{
-            $loan_type='Накопительный';
+            $loan_type='Accumulative';
         };
     $loan_amount = $userinfo["loan_amount"]; //ОБЩАЯ СУММА ЗАЙМА
     $userid = $userinfo["idUser"]; // Выбираем id пользователя потому что база не связана Foreign Key ключами
@@ -40,7 +40,7 @@ require('connect.php');
     //   Дата выдачи займа:
     $loan_issue_date = $loaner_info["loan_issue_date"];
         if($loan_issue_date==0){
-            $loan_issue_date='Открыта';
+            $loan_issue_date='Open';
         }
         else{
             $loan_issue_date= date('d.m.Y', $loan_issue_date );
