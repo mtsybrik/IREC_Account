@@ -81,6 +81,10 @@ require('connect.php');
     $loan_years = 10;
     $loan_months = $loan_years*12;//месяцев в году
     $loan_upfront_payment = $loan_amount*0.33; // Первоначальный взнос (33% на данный момент)
+    if($userinfo["idUser"]==1 || $userinfo["idUser"]==2){
+        $loan_upfront_payment = $loan_amount/3;
+        $loan_upfront_payment = round($loan_upfront_payment,0);
+    }
     $loan_with_percents = $loan_amount-$loan_upfront_payment; // Тело для начисления процентов
     $loan_monthly_percent = $percentage_rate/1200; //Процентов в месяц
     $monthly_payment_with_percent = $loan_with_percents*($loan_monthly_percent+($loan_monthly_percent/((pow((1+$loan_monthly_percent),$loan_months))-1))); // Месячный платеж с процентами
