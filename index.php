@@ -10,7 +10,7 @@ require 'Libs/functions.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta charset="utf-8" />
@@ -182,7 +182,7 @@ require 'Libs/functions.php';
 			  <div class="row">
 				<div class="sales-graph-heading">
 				<div class="col-md-4 col-sm-4">
-                  <p class="semi-bold">WELLMAX AVAILABLE</br>  BALANCE</p>
+                  <p class="semi-bold">WELLMAX TOTAL</br> BALANCE</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $BM_balance;?>" data-animation-duration="700"><?echo $BM_balance;?></span> USD</h4>
 				</div>
 				<div class="col-md-3 col-sm-3">
