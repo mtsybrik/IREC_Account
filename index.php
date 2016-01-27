@@ -194,7 +194,7 @@ require 'Libs/functions.php';
 				  <h4><span class="semi-bold">0</span></h4>
 				</div>
 				<div class="col-md-2 col-sm-2">
-				  <p class="semi-bold">SUM OF</br> INDEPTEDNESS</p>
+				  <p class="semi-bold">SUM OF</br> INDEBTEDNESS</p>
 				  <h4><span class="item-count animate-number semi-bold" data-value="<?echo $total_debt_montly;?>" data-animation-duration="700"><?echo $total_debt_montly;?></span> USD</h4>
 				</div>
 				<div class="clearfix"></div>

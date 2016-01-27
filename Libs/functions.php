@@ -69,7 +69,8 @@ require('connect.php');
     $percentage_rate = $loaner_info["percentage_rate"];
 
     //ДАТА СЛЕДУЮЩЕГО ПЛАТЕЖА
-    $next_payment_date=date('07.m.Y',$loaner_info["next_payment_date"]);
+    $next_month_payment_date = date('m', $loaner_info["next_payment_date"])+1;
+    $next_payment_date= '07.'. sprintf('%02d', $next_month_payment_date) . date('.Y',$loaner_info["next_payment_date"]);
 
     //СУММА ЗАДОЛЖЕННОСТИ
     $total_debt_montly = $loaner_info["total_debt_montly"];

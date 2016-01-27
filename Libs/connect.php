@@ -15,7 +15,7 @@ if($env=='production') {
 else{
     $user = 'root';
     $password = "root";
-    $db = 'mydb';
+    $db = 'accounts_db';
     $host = 'localhost';
     $port = 3307;
 }
