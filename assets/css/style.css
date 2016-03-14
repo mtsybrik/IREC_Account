@@ -2052,7 +2052,7 @@ blockquote.pull-right small:after {
   color: #8b91a0 !important;
 }
 .text-success {
-  color: #0aa699 !important;
+  color: #3EAE07 !important;
 }
 .text-info {
   color: #0090d9 !important;
@@ -5656,24 +5656,24 @@ form legend,
   color: #ffffff;
 }
 .tiles.red {
-  background-color: #f35958;
+  background-color: #FF393E;
 }
 .tiles.red .button {
   background: #bf3938;
   color: #f7bebe;
 }
 .tiles.purple {
-  background-color: #735f87;
+  background-color: #FFA800;
 }
 .tiles.purple .button {
   background: #736086;
   color: #d7d5d7;
 }
 .tiles.blue {
-  background-color: #0090d9;
+  background-color: #016DF7;
 }
 .tiles.green {
-  background-color: #0aa699;
+  background-color: #3EAE07;
 }
 .tiles.black {
   background-color: #22262e;

@@ -97,7 +97,7 @@ require 'Libs/functions.php';
   </div>
   <!-- END SIDEBAR -->
   <!-- BEGIN PAGE CONTAINER-->
-  <div class="page-content">
+  <div class="page-content" style="background-image: url('assets/img/real-estate-background_2.jpg');background-size: 100% 100%;">
     <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
     <div id="portlet-config" class="modal hide">
       <div class="modal-header">
